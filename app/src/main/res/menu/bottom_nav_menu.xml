@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_favorites"
+        android:enabled="true"
+        android:icon="@drawable/ic_calendar_today_24px"
+        android:title="일정"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_recents"
+        android:enabled="true"
+        android:icon="@drawable/ic_assignment_turned_in_24px"
+        android:title="일기"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_plus"
+        android:enabled="true"
+        android:icon="@drawable/ic_phonebook"
+        android:title="정보"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:text="오늘, 내일 일정"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp">
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/arrow"
+            android:rotation="270"
+            android:id="@+id/prev"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="2019 / 6"
+            android:textSize="18dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/calendar"/>
+        <Button
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/arrow"
+            android:rotation="90"
+            android:id="@+id/next"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_plan"
+            android:text="추가"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btnDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_plan"
+            android:text="삭제"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:choiceMode="singleChoice"
+        android:fastScrollEnabled="false"
+        android:transcriptMode="disabled">
+
+    </ListView>
+
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:id="@+id/fabListButton"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_gravity="end|bottom"-->
+    <!--        android:layout_marginRight="16dp"-->
+    <!--        android:layout_marginBottom="2dp"-->
+    <!--        android:background="@drawable/listview_border"-->
+    <!--        android:clickable="true"-->
+    <!--        android:focusable="true"-->
+    <!--        app:backgroundTint="#FFFFFF"-->
+    <!--        app:srcCompat="@drawable/ic_plus" />-->
+
+</LinearLayout>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoModifyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="정보 수정"
+            android:textSize="48dp"
+            android:layout_marginBottom="24dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="2dp"
+            android:layout_marginBottom="4dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="좌우명  *"
+                android:textSize="18dp"
+                android:layout_marginRight="14dp"/>
+
+            <EditText
+                android:id="@+id/say"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="startDatePicker"
+            android:paddingLeft="2dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="입대 일 *"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-06-03"
+                android:textSize="18dp"
+                android:layout_marginLeft="18dp"
+                android:id="@+id/start_date"
+                android:background="@drawable/textview_underline"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="endDatePicker"
+            android:paddingLeft="2dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제대 일 *"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-06-03"
+                android:textSize="18dp"
+                android:layout_marginLeft="18dp"
+                android:id="@+id/end_date"
+                android:background="@drawable/textview_underline"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="pfcDatePicker"
+            android:paddingLeft="2dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="일병진급"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-06-03"
+                android:textSize="18dp"
+                android:layout_marginLeft="18dp"
+                android:id="@+id/pfc"
+                android:background="@drawable/textview_underline"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="corparalDatePicker"
+            android:paddingLeft="2dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상병진급"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-06-03"
+                android:textSize="18dp"
+                android:layout_marginLeft="18dp"
+                android:id="@+id/corparal"
+                android:background="@drawable/textview_underline"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="sergeantDatePicker"
+            android:paddingLeft="2dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="병장진급"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2019-06-03"
+                android:textSize="18dp"
+                android:layout_marginLeft="18dp"
+                android:id="@+id/sergeant"
+                android:background="@drawable/textview_underline"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="2dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="정기휴가"
+                android:textSize="18dp"
+                android:layout_marginRight="14dp"/>
+
+
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/arrow"
+                android:rotation="270"
+                android:onClick="decreaseBtn1"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="26"
+                android:textSize="18dp"
+                android:id="@+id/regular_holiday"/>
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/arrow"
+                android:rotation="90"
+                android:onClick="increaseBtn1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="2dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="포상휴가"
+                android:textSize="18dp"
+                android:layout_marginRight="14dp"/>
+
+
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/arrow"
+                android:rotation="270"
+                android:onClick="decreaseBtn2"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="0"
+                android:textSize="18dp"
+                android:id="@+id/reward_holiday"/>
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/arrow"
+                android:rotation="90"
+                android:onClick="increaseBtn2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="2dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="위로휴가"
+                android:textSize="18dp"
+                android:layout_marginRight="14dp" />
+
+
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/arrow"
+                android:rotation="270"
+                android:onClick="decreaseBtn3"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="0"
+                android:textSize="18dp"
+                android:id="@+id/consolation_holiday"/>
+            <Button
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                style="?android:attr/borderlessButtonStyle"
+                android:background="@drawable/arrow"
+                android:rotation="90"
+                android:onClick="increaseBtn3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저장"
+                android:textColor="#ffffff"
+                android:layout_marginRight="4dp"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="modify"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="취소"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="4dp"
+                android:background="@color/colorPrimaryDark"
+                android:onClick="cancel"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
