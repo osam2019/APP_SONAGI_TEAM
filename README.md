@@ -6,8 +6,11 @@
 ![메인](https://user-images.githubusercontent.com/54613588/67464197-e849b400-f67d-11e9-88f2-3590114565ce.PNG)
 
 
-### Developer
- #### 조찬민,박민재
+## Developer
+ - 상병 조찬민
+ - 일병 박민재
+
+## Description
 훈련병 시절부터 적어온 소나기가 핸드폰 실시 이후 존재감이 많이 잊혀지고 있다...*****~~(설마 너도 소나기 안쓰고 있니??)~~*****
 우리는 훈련병 때 그때 그 감성을 다시 되새겨보기 위해서 이 앱을 개발했다. 일기만 쓴다면 우리는 핸드폰에 내장되어 있는 켈린더 앱을 사용할 것이다. 하지만 "소나기" App은 사용자 중심의 InterFace 기반으로 휴가, 훈련 등의 일정관리도 쉽게 가능하고 군 생활을 하는 사용자가 편리하도록 자신의 군생활에 관련된 정보를 제공해준다.
 
@@ -24,10 +27,12 @@
 ## Front-End
 - AndroidStudio
 
-
- ## Back-End
+## Back-End
 - Django Restful API, Amazon EC2
- 
+
+## Why Use Backend Server?
+굳이 `SharedReference`를 쓰면 되는데 서버를 사용 한 이유는, **휴대폰 변경** 혹은 다른 **태블릿 기기와의 연동**, 그리고 커뮤니티 게시판 생성 **기능 확장성**을 위해서 사용 한 것이다. 또한, 앱을 지우고 깔아도 사용자의 유저 데이터를 유지 해 준다는 점이 장점이다.
+
 ## Extern Library 
 - Calendar: MaterialCalendarView [Github](https://github.com/prolificinteractive/material-calendarview)
   
@@ -80,7 +85,6 @@ email: happyjarban@gmail.com or sobu0715@gmail.com
 - 비밀번호 패턴 체크, 이메일 패턴 체크 같은 경우에는 정규 표현식으로 해결
 - User Check, Email Check 같은 경우에는 Backend 에서 오류 메세지를 Json으로 보낸 후 오류 메세지에 따라 중복 여부 호출
 - `InfoRegisterActivity` 사용 중 앱이 강제 종료 되면, 다음 로그인 시에 정보를 다시 입력하게 끔 함.
-- 
 
 ## Credit
 - 박민재 : 서버 프로그래밍, 안드로이드-서버 간 데이터 처리 담당
