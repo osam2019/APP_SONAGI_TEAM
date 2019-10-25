@@ -689,7 +689,7 @@ public class SecondFragment extends Fragment {
                 Calendar end = Calendar.getInstance();
                 end.setTime(end_d);
 
-                if (cur.get(Calendar.YEAR) == start.get(Calendar.YEAR) && (cur.get(Calendar.MONTH) == start.get(Calendar.MONTH))) {
+                if ((cal_year == start.get(Calendar.YEAR)) && (cal_month == start.get(Calendar.MONTH) + 1)) {
                     myAdapter.addItem(jsonObject.getInt("id"), jsonObject.getString("start_date"), jsonObject.getString("end_date"), jsonObject.getString("title"), i_type);
                 }
             } catch (Exception e) {
