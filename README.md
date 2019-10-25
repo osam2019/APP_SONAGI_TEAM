@@ -28,7 +28,7 @@
 - AndroidStudio
 
 ## Back-End
-- Django Restful API, Amazon EC2
+- Django Restful API, Amazon EC2, SQLite
 
 ## Why Use Backend Server?
 굳이 `SharedReference`를 쓰면 되는데 서버를 사용 한 이유는, **휴대폰 변경** 혹은 다른 **태블릿 기기와의 연동**, 그리고 커뮤니티 게시판 생성 **기능 확장성**을 위해서 사용 한 것이다. 또한, 앱을 지우고 깔아도 사용자의 유저 데이터를 유지 해 준다는 점이 장점이다.
@@ -63,7 +63,7 @@
 	 
 **Login Acting**
 
-`LoadingActivity`에서 로그인에 대한 토큰 검사 후 토큰이 없거나, 만료되었을 시 `LoginActivity`로 이동합니다. 토큰 존재시 `MainActivty`로 넘어가 서비스를 이용할 수 있습니다.
+`LoadingActivity`에서 로그인에 대한 토큰 검사 후 토큰이 없거나, 만료되었을 시 `LoginActivity`로 이동합니다. <br />토큰 존재시 `MainActivty`로 넘어가 서비스를 이용할 수 있습니다.
 
 
 ## Installation Process
@@ -79,12 +79,14 @@ email: happyjarban@gmail.com or sobu0715@gmail.com
    
    
 ## Known Issues
-오늘 & 내일 일정 `Notification`을 병사들의 휴대폰 불출 시간인 18시에 맞추어 테스트 해보고 싶었지만, 시간 관계상 구현만 하고, 테스트는 안해 본 상태입니다.
+오늘 & 내일 일정 `Notification`을 병사들의 휴대폰 불출 시간인 18시에 맞추어 테스트 해보고 싶었지만, 시간 관계상 구현만 하고 테스트는 안해 본 상태입니다.
  
 ## Troubleshooting
 - 비밀번호 패턴 체크, 이메일 패턴 체크 같은 경우에는 정규 표현식으로 해결
 - User Check, Email Check 같은 경우에는 Backend 에서 오류 메세지를 Json으로 보낸 후 오류 메세지에 따라 중복 여부 호출
 - `InfoRegisterActivity` 사용 중 앱이 강제 종료 되면, 다음 로그인 시에 정보를 다시 입력하게 끔 함.
+- 일기를 작성하면 표시되도록 SaveDayDecorator클래스를 제작 
+- 오늘, 내일일정을 가로 슬라이드로 표시하기 위해 RecyclerView로 가로 ListView를 
 
 ## Credit
 - 박민재 : 서버 프로그래밍, 안드로이드-서버 간 데이터 처리 담당
