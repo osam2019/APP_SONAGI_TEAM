@@ -676,7 +676,22 @@ public class SecondFragment extends Fragment {
                 i_type = 3;
             try {
                 JSONObject jsonObject = postSchedule(i_type, plan.getText().toString(), sdate.getText().toString(), edate.getText().toString());
-                myAdapter.addItem(jsonObject.getInt("id"), jsonObject.getString("start_date"), jsonObject.getString("end_date"), jsonObject.getString("title"), i_type);
+                String start_date = jsonObject.getString("start_date");
+                String end_date = jsonObject.getString("end_date");
+
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                Date start_d = sdf.parse(start_date);
+                Date end_d = sdf.parse(end_date);
+
+                Calendar cur = Calendar.getInstance();
+                Calendar start = Calendar.getInstance();
+                start.setTime(start_d);
+                Calendar end = Calendar.getInstance();
+                end.setTime(end_d);
+
+                if (cur.get(Calendar.YEAR) == start.get(Calendar.YEAR) && (cur.get(Calendar.MONTH) == start.get(Calendar.MONTH))) {
+                    myAdapter.addItem(jsonObject.getInt("id"), jsonObject.getString("start_date"), jsonObject.getString("end_date"), jsonObject.getString("title"), i_type);
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }

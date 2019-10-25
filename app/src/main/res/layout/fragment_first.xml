@@ -36,7 +36,7 @@ btnSave - 선택한 날짜의 일기 저장 및 수정(덮어쓰기) 버튼
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="10"
+        android:layout_weight="6"
         android:gravity="bottom"
         android:minHeight="100dp"
         android:orientation="vertical"
